@@ -10,7 +10,7 @@ Explore US Bikeshare data
 This Project uses Python and Pandas to enable a user analyze the data of a Bike rental store for 6 months in three US cities. It allows users to calculate frequent travel destination, total travel time, mean travel time, average trip duration, the most used stations etc. It gives insight into the operations of the store which can be useful for making conclusions or concrete decisions about the store.
 
 ### Files used
-Files Used include Bikeshare data for New York: new_york_city.csv, Washington: washington.csv and Chicago: chicago.csv. A Python script bikeshare.py was created to analyze the data from all CSV files.
+Files Used in this project include Bikeshare data for New York: new_york_city.csv, Washington: washington.csv and Chicago: chicago.csv. A Python script bikeshare.py was created to analyze the data from all CSV files.
 ### Author
 Precious Sani is the sole author of this project.
 ### Credits
