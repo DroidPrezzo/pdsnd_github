@@ -219,7 +219,7 @@ def user_stats(df):
     #Function to display 5 rows of raw data
 def data_display(df):
     """Displays raw csv files of the data on user prompt."""
-    
+
 
     rdata = ''
     count = 0
@@ -240,11 +240,15 @@ def data_display(df):
     while rdata == 'yes':
         print("\nDo you want to see more raw data?")
         count += 5
-        rdata = input("\nplease type YES or NO here: ").lower()
-        if rdata == 'yes':
+        rdata = input("\nplease type '1' for YES or '2' for NO here: ")
+        if rdata == 1:
+            rdata == 'yes'
             print(df[count:count+5])
-        elif rdata != 'yes':
+        elif rdata == 2:
+            rdata = 'no'
             break
+        else:
+            print("\nKindly Enter appropriate number please")
 
 
 
