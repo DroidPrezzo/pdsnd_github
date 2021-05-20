@@ -245,6 +245,7 @@ def data_display(df):
     while rdata == 'yes':
         print("\nDo you want to see more raw data?")
         count += 5
+<<<<<<< HEAD
         rdata = input("\nPlease type '1' for YES or '2' for NO here: ")
          if rdata == 1:
             rdata = 'yes'
@@ -254,6 +255,17 @@ def data_display(df):
             rdata = 'no'
             break
             print("\nKindly Enter an appropriate number please")
+=======
+        rdata = input("\nplease type '1' for YES or '2' for NO here: ")
+        if rdata == 1:
+            rdata == 'yes'
+            print(df[count:count+5])
+        elif rdata == 2:
+            rdata = 'no'
+            break
+        else:
+            print("\nKindly Enter appropriate number please")
+>>>>>>> e8fd78af4582eecd10cc292b23c4bd5b55c096c6
 
 
 
