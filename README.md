@@ -11,7 +11,8 @@ This Project uses Python and Pandas to enable a user analyze the data of a Bike 
 
 ### Files used
 Files Used include Bikeshare data for New York: new_york_city.csv, Washington: washington.csv and Chicago: chicago.csv. A Python script bikeshare.py was created to analyze the data from all CSV files.
-
+### Author
+Precious Sani is the sole author of this project.
 ### Credits
 Aritra's repository (https://github.com/Aritra96) helped with understanding the structure of the function required to view raw data.
 
