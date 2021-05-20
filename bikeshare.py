@@ -19,7 +19,7 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         print("Hey there! which city would you like to analyze\n Choose from the following cities\n 1.Chicago 2.New york city 3.Washington")
-        city = input ("Enter the number of the city of your choice from the cities listed above, 1, 2 or 3 without space or periods: ")
+        city = input ("\nEnter the number of the city of your choice from the cities listed above, 1, 2 or 3 without space or periods: ")
         if city == '1':
             city = 'chicago'
             break
@@ -218,11 +218,16 @@ def user_stats(df):
 
     #Function to display 5 rows of raw data
 def data_display(df):
-    """Displays raw csv files of the data on user prompt."""
-    
+    """Displays raw csv files of the data on user prompt.
+     user is prompted to enter 1 or 2 equivalent
+
+     to yes or no respectively
+    """
+
 
     rdata = ''
     count = 0
+# loop to determine if user wants to see the raw data that was analyzed
     while True:
         print("\nDo you wish to view the raw data?\nType '1' for YES and '2' for NO")
         rdata = int(input("Enter number here: "))
@@ -236,15 +241,19 @@ def data_display(df):
         else:
             print("\nKindly Enter appropriate number please")
 
-
+#loop to determine whether user wants to see more data or not
     while rdata == 'yes':
         print("\nDo you want to see more raw data?")
         count += 5
-        rdata = input("\nplease type YES or NO here: ").lower()
-        if rdata == 'yes':
+        rdata = input("\nPlease type '1' for YES or '2' for NO here: ")
+         if rdata == 1:
+            rdata = 'yes'
             print(df[count:count+5])
-        elif rdata != 'yes':
             break
+        elif rdata == 2:
+            rdata = 'no'
+            break
+            print("\nKindly Enter an appropriate number please")
 
 
 
@@ -252,13 +261,13 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-
+#calling all defined functions above to enable them work
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
         data_display(df)
-
+#prompt user to decide if he wants to run the script again
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
